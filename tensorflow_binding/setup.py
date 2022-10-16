@@ -70,7 +70,7 @@ else:
                   "undefined symbol: _ZN10tensorflow... errors")
     TF_CXX11_ABI = "0"
 
-extra_compile_args = ['-std=c++11', '-fPIC', '-D_GLIBCXX_USE_CXX11_ABI=' + TF_CXX11_ABI]
+extra_compile_args = ['-std=c++14', '-fPIC', '-D_GLIBCXX_USE_CXX11_ABI=' + TF_CXX11_ABI]
 # current tensorflow code triggers return type errors, silence those for now
 extra_compile_args += ['-Wno-return-type']
 if LooseVersion(tf.__version__) >= LooseVersion('1.4'):
