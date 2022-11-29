@@ -18,7 +18,7 @@ try:
 except ImportError:
     raise RuntimeError("Tensorflow must be installed to build the tensorflow wrapper.")
 
-if "CUDA_HOME" not in os.environ:
+if "CUDA_HOME" not in os.environ or not os.environ.get("CUDA_HOME"):
     print("CUDA_HOME not found in the environment so building "
           "without GPU support. To build with GPU support "
           "please define the CUDA_HOME environment variable. "
