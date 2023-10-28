@@ -2,9 +2,9 @@
     "cmake.configureEnvironment": {
         "CPPFLAGS": "-I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/llvm/include",
         "LDFLAGS": "-Wl,-rpath,/opt/homebrew/opt/libomp/lib -L/opt/homebrew/opt/libomp/lib -lomp -L/opt/homebrew/opt/llvm/lib",
-        "CXXFLAGS": "-I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/llvm/include",
+        "CXXFLAGS": "-I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/llvm/include -no-pie",
         "CFLAGS": "-I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/llvm/include",
-        "CC": "/opt/homebrew/bin/gcc-13",
+        "CC": "/opt/homebrew/Cellar/llvm/17.0.3/bin/clang",
         "CXX": "/opt/homebrew/bin/g++-13"
     }
 }
